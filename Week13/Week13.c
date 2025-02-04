@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+   //   ---------- Singly Linked list -------
+
 // Node struct
 typedef struct Node {
     int data;
@@ -89,7 +91,7 @@ void insertMultiple(Node** head) {
     }
 }
 
-
+//   ---------- Doubly Linked list -----
 
 // Node struct
 typedef struct DNode {

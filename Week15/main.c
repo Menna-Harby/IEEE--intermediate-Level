@@ -27,8 +27,8 @@ void infix_to_postfix(char* expression, char* output) {
                 strcat(output, pop(&stack));
                 strcat(output, " ");
             }
-            pop(&stack); // Pop the '('
-        } else { // Operator
+            pop(&stack); 
+        } else { 
             while (!is_empty(&stack) && precedence(peek(&stack)[0]) >= precedence(token[0])) {
                 strcat(output, pop(&stack));
                 strcat(output, " ");
@@ -52,7 +52,7 @@ int evaluate_postfix(char* expression) {
     while (token) {
         if (isdigit(token[0])) {
             push(&stack, token);
-        } else { // Operator
+        } else { 
             int right = atoi(pop(&stack));
             int left = atoi(pop(&stack));
             char result[MAX];

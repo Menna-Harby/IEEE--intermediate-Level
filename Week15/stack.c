@@ -21,12 +21,12 @@ char* pop(Stack *s) {
     if (!is_empty(s)) {
         return s->items[(s->top)--];
     }
-    return "";
+    return ""; // Return empty, if stack empty
 }
 
 char* peek(Stack *s) {
     if (!is_empty(s)) {
         return s->items[s->top];
     }
-    return "";
+    return ""; 
 }
